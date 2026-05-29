@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>मेरी पहली वेबसाइट</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { background: #111; color: #0f0; text-align: center; font-family: Arial; padding-top: 50px; }
+        h1 { color: #ff0000; font-size: 40px; }
+        .box { border: 2px solid #0f0; padding: 20px; margin: 20px; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>नमस्ते भाई</h1>
+        <p>ये Termux से बनी मेरी वेबसाइट है</p>
+        <p>अभी टाइम है: <span id="time"></span></p>
+    </div>
+    <script>
+        setInterval(()=>{ 
+            document.getElementById("time").innerText = new Date().toLocaleTimeString(); 
+        }, 1000);
+    </script>
+</body>
+</html>
